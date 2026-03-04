@@ -2,6 +2,7 @@
 
 # Web表示用に画像サイズを最低限のサイズまで下げるスクリプト
 # 実行ディレクトリ配下の images ディレクトリを対象とします。
+# cwebpを使用してWebP形式に変換し、さらなる軽量化を図ります。
 
 TARGET_DIR="./images"
 ORIG_DIR="$TARGET_DIR/orig"
@@ -10,27 +11,29 @@ ORIG_DIR="$TARGET_DIR/orig"
 mkdir -p "$ORIG_DIR"
 
 # リサイズする最大サイズ（長辺ピクセル）
-# 一般的なスマホ〜PC表示で必要十分な800pxとしています (必要に応じて変更してください)
 MAX_SIZE=800
+# WebPのクオリティ (0-100)
+WEBP_QUALITY=75
 
-echo "画像の最適化を開始します..."
+echo "画像の最適化を開始します (WebP変換)..."
 
-# png, jpg, jpeg ファイルを対象に処理
-for img in "$TARGET_DIR"/*.png "$TARGET_DIR"/*.jpg "$TARGET_DIR"/*.jpeg; do
-    # 対象ファイルが存在しない場合はスキップ
+# ./images/orig 内のオリジナル画像を元にWebP変換を行う
+for img in "$ORIG_DIR"/*.png "$ORIG_DIR"/*.jpg "$ORIG_DIR"/*.jpeg; do
     if [ ! -f "$img" ]; then
         continue
     fi
 
     filename=$(basename "$img")
+    basename_no_ext="${filename%.*}"
     
-    # オリジナル画像を orig ディレクトリに移動
-    mv "$img" "$ORIG_DIR/$filename"
+    # 変換出力先
+    out_file="$TARGET_DIR/${basename_no_ext}.webp"
     
-    # sipsコマンド (macOS標準) でアスペクト比を維持したまま長辺をリサイズし、元の名前で保存
-    sips -Z $MAX_SIZE "$ORIG_DIR/$filename" --out "$TARGET_DIR/$filename" > /dev/null
+    # cwebpを使用してリサイズとWebP変換を実行
+    # -resize <width> <height> (片方が0ならアスペクト比維持)
+    cwebp -q $WEBP_QUALITY -resize $MAX_SIZE 0 "$img" -o "$out_file" > /dev/null 2>&1
     
-    echo "リサイズ完了: $filename"
+    echo "WebP変換完了: ${basename_no_ext}.webp"
 done
 
 echo "完了しました。オリジナル画像は $ORIG_DIR に保存されています。"
