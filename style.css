@@ -652,6 +652,31 @@ main {
   border: none;
 }
 
+.vket-attribution {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.8;
+  transition: var(--transition-fast);
+}
+
+.vket-attribution:hover {
+  opacity: 1;
+}
+
+.vket-logo-link {
+  display: block;
+  height: 24px;
+}
+
+.vket-logo-link img {
+  height: 100%;
+  width: auto;
+  border-radius: 0;
+}
+
 @media (max-width: 600px) {
   .virtual-world-container {
     padding-top: 75%;
