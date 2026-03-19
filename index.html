@@ -20,15 +20,7 @@
             <span class="marche-icon">🍊</span> 長崎のまるしぇ
         </a>
         <div class="header-actions">
-            <button class="cart-btn" aria-label="カートを見る">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="9" cy="21" r="1"></circle>
-                    <circle cx="20" cy="21" r="1"></circle>
-                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                </svg>
-                <span class="cart-badge">0</span>
-            </button>
+            <!-- Cart Button Removed -->
         </div>
     </header>
 
@@ -42,11 +34,22 @@
             <span class="hero-subtitle">Virtual Experience</span>
             <h2 class="section-title">バーチャル長崎マルシェ</h2>
             <p class="hero-desc">3D空間で長崎の魅力を体験。新しいお買い物体験をお楽しみください。</p>
-            <div class="virtual-world-container">
+            <!-- PC: iframeでそのまま表示 -->
+            <div class="virtual-world-container virtual-world-desktop">
                 <iframe src="https://sion908.cloud.vket.com/worlds/piLrBUgY/main.html?worldid=piLrBUgY"
                     allow="camera; microphone; display-capture; autoplay; clipboard-write; xr-spatial-tracking"
                     allowfullscreen>
                 </iframe>
+            </div>
+            <!-- スマホ: 外部リンクボタンで誘導 -->
+            <div class="virtual-world-mobile">
+                <div class="vw-mobile-art">🏙️</div>
+                <p class="vw-mobile-caption">3D仮想空間を体験する</p>
+                <p class="vw-mobile-note">ブラウザでフルスクリーン体験をお楽しみください</p>
+                <a href="https://sion908.cloud.vket.com/worlds/piLrBUgY/main.html?worldid=piLrBUgY" target="_blank"
+                    rel="noopener" class="vw-mobile-btn">
+                    <span>🌐</span> バーチャル長崎マルシェを開く
+                </a>
             </div>
             <div class="vket-attribution">
                 <a href="https://vketcloud.com/" target="_blank" rel="noopener" class="vket-logo-link">
@@ -55,208 +58,11 @@
             </div>
         </section>
 
-        <section class="shops-grid">
-
-            <a href="shop01.html" class="shop-card">
-                <div class="shop-card-img-wrap">
-                    <span class="shop-category-badge">柑橘</span>
-                    <img src="images/shop01_hero.webp" alt="西海みかん農園" class="shop-card-img" loading="lazy">
-                </div>
-                <div class="shop-card-body">
-                    <div class="shop-card-area">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        西海市
-                    </div>
-                    <h3 class="shop-card-title serif">西海みかん農園</h3>
-                    <p class="shop-card-concept">段々畑で育てた潮風みかん</p>
-                    <div class="shop-card-action">お店へ行く →</div>
-                </div>
-            </a>
-
-            <a href="shop02.html" class="shop-card">
-                <div class="shop-card-img-wrap">
-                    <span class="shop-category-badge">海産物</span>
-                    <img src="images/shop02_hero.webp" alt="五島海の幸市場" class="shop-card-img" loading="lazy">
-                </div>
-                <div class="shop-card-body">
-                    <div class="shop-card-area">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        五島列島
-                    </div>
-                    <h3 class="shop-card-title serif">五島海の幸市場</h3>
-                    <p class="shop-card-concept">五島の朝獲れ海産物を直送</p>
-                    <div class="shop-card-action">お店へ行く →</div>
-                </div>
-            </a>
-
-            <a href="shop03.html" class="shop-card">
-                <div class="shop-card-img-wrap">
-                    <span class="shop-category-badge">米</span>
-                    <img src="images/shop03_hero.webp" alt="島原湧水米" class="shop-card-img" loading="lazy">
-                </div>
-                <div class="shop-card-body">
-                    <div class="shop-card-area">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        島原
-                    </div>
-                    <h3 class="shop-card-title serif">島原湧水米</h3>
-                    <p class="shop-card-concept">雲仙の湧水で育てた米</p>
-                    <div class="shop-card-action">お店へ行く →</div>
-                </div>
-            </a>
-
-            <a href="shop04.html" class="shop-card">
-                <div class="shop-card-img-wrap">
-                    <span class="shop-category-badge">ハーブ・野菜</span>
-                    <img src="images/shop04_hero.webp" alt="雲仙ハーブ園" class="shop-card-img" loading="lazy">
-                </div>
-                <div class="shop-card-body">
-                    <div class="shop-card-area">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        雲仙
-                    </div>
-                    <h3 class="shop-card-title serif">雲仙ハーブ園</h3>
-                    <p class="shop-card-concept">雲仙の霧で育つハーブ</p>
-                    <div class="shop-card-action">お店へ行く →</div>
-                </div>
-            </a>
-
-            <a href="shop05.html" class="shop-card">
-                <div class="shop-card-img-wrap">
-                    <span class="shop-category-badge">肉</span>
-                    <img src="images/shop05_hero.webp" alt="平戸牛牧場" class="shop-card-img" loading="lazy">
-                </div>
-                <div class="shop-card-body">
-                    <div class="shop-card-area">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        平戸
-                    </div>
-                    <h3 class="shop-card-title serif">平戸牛牧場</h3>
-                    <p class="shop-card-concept">潮風で育つ平戸牛</p>
-                    <div class="shop-card-action">お店へ行く →</div>
-                </div>
-            </a>
-
-            <a href="shop06.html" class="shop-card">
-                <div class="shop-card-img-wrap">
-                    <span class="shop-category-badge">果物</span>
-                    <img src="images/shop06_hero.webp" alt="長崎びわ農家" class="shop-card-img" loading="lazy">
-                </div>
-                <div class="shop-card-body">
-                    <div class="shop-card-area">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        長崎市
-                    </div>
-                    <h3 class="shop-card-title serif">長崎びわ農家</h3>
-                    <p class="shop-card-concept">茂木びわの産地直送</p>
-                    <div class="shop-card-action">お店へ行く →</div>
-                </div>
-            </a>
-
-            <a href="shop07.html" class="shop-card">
-                <div class="shop-card-img-wrap">
-                    <span class="shop-category-badge">きのこ</span>
-                    <img src="images/shop07_hero.webp" alt="対馬しいたけ山" class="shop-card-img" loading="lazy">
-                </div>
-                <div class="shop-card-body">
-                    <div class="shop-card-area">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        対馬
-                    </div>
-                    <h3 class="shop-card-title serif">対馬しいたけ山</h3>
-                    <p class="shop-card-concept">原木栽培の肉厚しいたけ</p>
-                    <div class="shop-card-action">お店へ行く →</div>
-                </div>
-            </a>
-
-            <a href="shop08.html" class="shop-card">
-                <div class="shop-card-img-wrap">
-                    <span class="shop-category-badge">酒</span>
-                    <img src="images/shop08_hero.webp" alt="壱岐麦焼酎蔵" class="shop-card-img" loading="lazy">
-                </div>
-                <div class="shop-card-body">
-                    <div class="shop-card-area">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        壱岐
-                    </div>
-                    <h3 class="shop-card-title serif">壱岐麦焼酎蔵</h3>
-                    <p class="shop-card-concept">麦100%の壱岐焼酎</p>
-                    <div class="shop-card-action">お店へ行く →</div>
-                </div>
-            </a>
-
-            <a href="shop09.html" class="shop-card">
-                <div class="shop-card-img-wrap">
-                    <span class="shop-category-badge">調味料</span>
-                    <img src="images/shop09_hero.webp" alt="小浜温泉塩工房" class="shop-card-img" loading="lazy">
-                </div>
-                <div class="shop-card-body">
-                    <div class="shop-card-area">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        小浜
-                    </div>
-                    <h3 class="shop-card-title serif">小浜温泉塩工房</h3>
-                    <p class="shop-card-concept">温泉熱で作る天然塩</p>
-                    <div class="shop-card-action">お店へ行く →</div>
-                </div>
-            </a>
-
-            <a href="shop10.html" class="shop-card">
-                <div class="shop-card-img-wrap">
-                    <span class="shop-category-badge">野菜</span>
-                    <img src="images/shop10_hero.webp" alt="長崎路地野菜" class="shop-card-img" loading="lazy">
-                </div>
-                <div class="shop-card-body">
-                    <div class="shop-card-area">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        長崎市近郊
-                    </div>
-                    <h3 class="shop-card-title serif">長崎路地野菜</h3>
-                    <p class="shop-card-concept">小さな畑の季節野菜</p>
-                    <div class="shop-card-action">お店へ行く →</div>
-                </div>
-            </a>
-
+        <section class="shopping-district-container">
+            <div id="shop-list" class="shopping-district">
+                <div class="district-road"></div>
+                <!-- Shops and decorations will be injected here -->
+            </div>
         </section>
     </main>
 
@@ -264,18 +70,120 @@
         <p>&copy; 2026 Trip Market / 長崎のまるしぇ Project.</p>
         <p class="footnote">※これはテスト用のモックアプリケーション（静的HTML版）です</p>
     </footer>
+
     <script>
-        // Simple global cart logic
-        let cartCount = 0;
-        function addToCart(productId) {
-            cartCount++;
-            const badge = document.querySelector('.cart-badge');
-            if (badge) {
-                badge.textContent = cartCount;
-                badge.style.transform = 'scale(1.5)';
-                setTimeout(() => { badge.style.transform = 'scale(1)'; }, 200);
+        async function initShoppingDistrict() {
+            try {
+                const shops = [
+                    { "id": "shop01", "name": "西海みかん農園", "area": "西海市", "concept": "段々畑のみかん", "category": "柑橘", "image": "images/shop01_hero.webp", "link": "shop01.html", "status": "active" },
+                    { "id": "shop02", "name": "五島海の幸市場", "area": "五島列島", "concept": "朝獲れ海産物", "category": "海産物", "image": "images/shop02_hero.webp", "link": "shop02.html", "status": "active" },
+                    { "id": "shop03", "name": "島原湧水米", "area": "島原", "concept": "雲仙の湧水米", "category": "米", "image": "images/shop03_hero.webp", "link": "shop03.html", "status": "active" },
+                    { "id": "shop04", "name": "雲仙ハーブ園", "area": "雲仙", "concept": "雲仙の霧ハーブ", "category": "ハーブ", "image": "images/shop04_hero.webp", "link": "shop04.html", "status": "active" },
+                    { "id": "shop05", "name": "平戸牛牧場", "area": "平戸", "concept": "潮風の平戸牛", "category": "肉", "image": "images/shop05_hero.webp", "link": "shop05.html", "status": "active" },
+                    { "id": "shop06", "name": "長崎びわ農家", "area": "長崎市", "concept": "茂木びわ直送", "category": "果物", "image": "images/shop06_hero.webp", "link": "shop06.html", "status": "active" },
+                    { "id": "shop07", "name": "対馬しいたけ山", "area": "対馬", "concept": "原木栽培しいたけ", "category": "きのこ", "image": "images/shop07_hero.webp", "link": "shop07.html", "status": "active" },
+                    { "id": "shop08", "name": "壱岐麦焼酎蔵", "area": "壱岐", "concept": "壱岐の麦焼酎", "category": "酒", "image": "images/shop08_hero.webp", "link": "shop08.html", "status": "active" },
+                    { "id": "shop09", "name": "佐世保高原野菜", "area": "佐世保", "concept": "黒島の赤土野菜", "category": "野菜", "image": "images/shop09_hero.webp", "link": "shop09.html", "status": "active" },
+                    { "id": "shop10", "name": "そのぎ茶舗", "area": "東彼杵", "concept": "日本一のそのぎ茶", "category": "茶", "image": "images/shop10_hero.webp", "link": "shop10.html", "status": "active" },
+                    { "id": "shop11", "name": "五島手延うどん店", "area": "五島", "concept": "椿油で仕上げる幻のうどん", "category": "麺類", "image": "coming_soon_01.webp", "status": "coming-soon" },
+                    { "id": "shop12", "name": "大村フラワーファーム", "area": "大村", "concept": "暮らしに寄り添う季節の花", "category": "花", "image": "coming_soon_02.webp", "status": "coming-soon" },
+                    { "id": "shop13", "name": "波佐見焼セレクト", "area": "波佐見", "concept": "日常を彩るモダンな器", "category": "工芸", "image": "coming_soon_03.webp", "status": "coming-soon" },
+                    { "id": "shop14", "name": "小浜温泉の塩", "area": "小浜", "concept": "温泉熱で作る極上の塩", "category": "調味料", "image": "coming_soon_04.webp", "status": "coming-soon" },
+                    { "id": "shop15", "name": "長崎カステラ工房", "area": "長崎市", "concept": "伝統の製法、黄金の輝き", "category": "菓子", "image": "coming_soon_01.webp", "status": "coming-soon" },
+                    { "id": "shop16", "name": "雲仙ジャムキッチン", "area": "雲仙", "concept": "太陽の恵み、手作りジャム", "category": "加工食品", "image": "coming_soon_02.webp", "status": "coming-soon" },
+                    { "id": "shop17", "name": "島原そうめん処", "area": "南島原", "concept": "コシの強さと喉ごしの良さ", "category": "麺類", "image": "coming_soon_03.webp", "status": "coming-soon" },
+                    { "id": "shop18", "name": "壱岐の干物屋", "area": "壱岐", "concept": "旨味が凝縮、旬の干物", "category": "海産物", "image": "coming_soon_04.webp", "status": "coming-soon" },
+                    { "id": "shop19", "name": "佐世保珈琲焙煎所", "area": "佐世保", "concept": "港町の香り、自家焙煎", "category": "飲料", "image": "coming_soon_01.webp", "status": "coming-soon" },
+                    { "id": "shop20", "name": "長崎の鼈甲細工", "area": "長崎市", "concept": "光のアート、伝統の煌めき", "category": "伝統工芸", "image": "coming_soon_02.webp", "status": "coming-soon" },
+                    { "id": "shop21", "name": "五島椿オイル館", "area": "五島", "concept": "髪と肌に、島の宝物", "category": "美容", "image": "coming_soon_03.webp", "status": "coming-soon" },
+                    { "id": "shop22", "name": "平戸の南蛮菓子", "area": "平戸", "concept": "異国の香り、懐かしの味", "category": "菓子", "image": "coming_soon_04.webp", "status": "coming-soon" },
+                    { "id": "shop23", "name": "雲仙の湯の花", "area": "雲仙", "concept": "自宅で楽しむ、硫黄の香り", "category": "雑貨", "image": "coming_soon_01.webp", "status": "coming-soon" },
+                    { "id": "shop24", "name": "諫早のうなぎ屋", "area": "諫早", "concept": "秘伝のタレ、香ばしい香り", "category": "惣菜", "image": "coming_soon_02.webp", "status": "coming-soon" },
+                    { "id": "shop25", "name": "長崎の中華菓子", "area": "長崎市", "concept": "カリッと食感、本場の味", "category": "菓子", "image": "coming_soon_03.webp", "status": "coming-soon" },
+                    { "id": "shop26", "name": "五島の芋焼酎", "area": "五島", "concept": "豊かな大地、芳醇な香り", "category": "酒", "image": "coming_soon_04.webp", "status": "coming-soon" },
+                    { "id": "shop27", "name": "松浦のアジフライ", "area": "松浦", "concept": "ふっくらジューシー、海の恵み", "category": "惣菜", "image": "coming_soon_01.webp", "status": "coming-soon" },
+                    { "id": "shop28", "name": "川棚の地酒", "area": "川棚", "concept": "清らかな水、真心の一滴", "category": "酒", "image": "coming_soon_02.webp", "status": "coming-soon" },
+                    { "id": "shop29", "name": "佐世保バーガー手作りキット", "area": "佐世保", "concept": "自宅で楽しむ、本場の味", "category": "加工食品", "image": "coming_soon_03.webp", "status": "coming-soon" },
+                    { "id": "shop30", "name": "五島の海塩工房", "area": "五島", "concept": "島の風と太陽、自然の結晶", "category": "調味料", "image": "coming_soon_04.webp", "status": "coming-soon" }
+                ];
+                const container = document.getElementById('shop-list');
+
+                // Layout pattern: outer-left, inner-left, inner-right, outer-right
+                const sides = ['side-left-outer', 'side-left-inner', 'side-right-inner', 'side-right-outer'];
+
+                // Decorations to sprinkle in randomly or at specific intervals
+                const decorations = [
+                    { type: 'tree', icons: ['🌳', '🌲', '🌴'] },
+                    { type: 'lamp', icon: '💡' },
+                    { type: 'bench', icon: '🪑' },
+                    { type: 'fountain', icon: '⛲' }
+                ];
+
+                shops.forEach((shop, index) => {
+                    const sideClass = sides[index % 4];
+                    const entry = document.createElement('div');
+                    entry.className = `district-entry ${sideClass}`;
+
+                    // Sprinkle decorations
+                    if (index % 3 === 0) {
+                        const decoWrap = document.createElement('div');
+                        if (index % 12 === 0) decoWrap.className = 'street-tree';
+                        else if (index % 8 === 0) decoWrap.className = 'street-lamp';
+                        else if (index % 10 === 0) decoWrap.className = 'street-fountain';
+                        else decoWrap.className = 'street-bench';
+
+                        const deco = decorations[index % decorations.length];
+                        decoWrap.textContent = deco.icons ? deco.icons[index % deco.icons.length] : deco.icon;
+                        entry.appendChild(decoWrap);
+                    }
+
+                    if (sideClass.includes('inner')) {
+                        const path = document.createElement('div');
+                        path.className = 'entry-path';
+                        entry.appendChild(path);
+                    }
+
+                    const isComingSoon = shop.status === 'coming-soon';
+                    const imagePath = isComingSoon ? `images/${shop.image}` : shop.image;
+
+                    const html = isComingSoon ? `
+                        <div class="shop-card status-coming-soon">
+                            <div class="shop-card-img-wrap">
+                                <img src="${imagePath}" class="shop-card-img" loading="lazy">
+                                <span class="status-badge">準備中</span>
+                            </div>
+                            <div class="shop-card-body">
+                                <div class="shop-card-area">📍 ${shop.area}</div>
+                                <h3 class="shop-card-title serif">${shop.name}</h3>
+                                <p class="shop-card-concept">${shop.concept}</p>
+                            </div>
+                        </div>
+                    ` : `
+                        <a href="${shop.link}" class="shop-card">
+                            <div class="shop-card-img-wrap">
+                                <span class="shop-category-badge">${shop.category}</span>
+                                <img src="${imagePath}" alt="${shop.name}" class="shop-card-img" loading="lazy">
+                            </div>
+                            <div class="shop-card-body">
+                                <div class="shop-card-area">📍 ${shop.area}</div>
+                                <h3 class="shop-card-title serif">${shop.name}</h3>
+                                <p class="shop-card-concept">${shop.concept}</p>
+                                <div class="shop-card-action">お店へ行く →</div>
+                            </div>
+                        </a>
+                    `;
+
+                    const temp = document.createElement('div');
+                    temp.innerHTML = html.trim();
+                    entry.appendChild(temp.firstChild);
+                    container.appendChild(entry);
+                });
+            } catch (error) {
+                console.error('Error loading shops:', error);
             }
         }
+
+        document.addEventListener('DOMContentLoaded', initShoppingDistrict);
     </script>
 </body>
 
